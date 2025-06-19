@@ -1,0 +1,11 @@
+indices:
+  mysite:
+    include:
+      - /**
+    exclude:
+      - /**.json
+    target: /query-index.json
+    properties:
+      title:
+        select: main > meta[property="og:title]
+        value: attribute(el, "content")
